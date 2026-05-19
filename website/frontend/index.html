@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENCHMARK ROUTE FORECASTER</title>
+    <meta name="description" content="Live predictions from cutoff to today">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+
+    <!-- ═══ TICKER BAR ═══ -->
+    <div class="ticker-bar">
+        <div class="ticker-label">
+            <div class="ticker-dot"></div>
+            PREDICTIONS LIVE
+        </div>
+        <div class="ticker-scroll" id="ticker-scroll"></div>
+    </div>
+
+    <!-- ═══ TERMINAL PANEL ═══ -->
+    <div class="terminal-panel">
+        <div class="terminal-header">
+            <div class="terminal-title">System Log</div>
+            <div class="terminal-status">
+                <div class="ticker-dot"></div>
+                ONLINE
+            </div>
+        </div>
+        <div class="terminal-feed" id="terminal-feed"></div>
+        <div class="terminal-footer">
+            <span id="gap-counter">-- days gap</span>
+            <span id="pred-counter">0 predictions</span>
+        </div>
+    </div>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <div class="main">
+
+        <div class="header">
+            <div>
+                <div class="brand">ROUTE <strong>FORECASTER</strong></div>
+                <div class="brand-sub">Predicting from Training Cutoff to Today &middot; XGBoost Pipeline</div>
+            </div>
+            <div class="header-controls">
+                <div class="terminal-status" style="margin-right:12px">
+                    <span id="last-updated">Updating...</span>
+                </div>
+                <button class="btn btn-accent" onclick="fullRefresh()">Refresh Data</button>
+            </div>
+        </div>
+
+        <!-- KPIs -->
+        <div class="kpi-row">
+            <div class="kpi">
+                <div class="kpi-label">Avg Forecast Today</div>
+                <div class="kpi-value" id="kpi-avg" style="color:var(--cyan)">--</div>
+                <div class="kpi-sub">across 4 lanes</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Training Cutoff</div>
+                <div class="kpi-value" id="kpi-cutoff" style="color:var(--purple);font-size:18px">--</div>
+                <div class="kpi-sub">last real data</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Current Date</div>
+                <div class="kpi-value" id="kpi-today" style="color:var(--green);font-size:18px">--</div>
+                <div class="kpi-sub">forecast target</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Total Predictions</div>
+                <div class="kpi-value" id="kpi-preds" style="color:var(--amber)">0</div>
+                <div class="kpi-sub">generated offline</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-label">Model R²</div>
+                <div class="kpi-value" id="kpi-r2" style="color:var(--red)">0.942</div>
+                <div class="kpi-sub">performance</div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="chart-grid">
+            <div class="chart-panel wide">
+                <div class="chart-header">
+                    <div class="chart-title">Forecasted Price Stream (All Routes)</div>
+                    <div class="chart-controls">
+                        <button class="btn btn-sm" data-range="7" onclick="setRange(7)">7D</button>
+                        <button class="btn btn-sm" data-range="14" onclick="setRange(14)">14D</button>
+                        <button class="btn btn-sm" data-range="30" onclick="setRange(30)">30D</button>
+                        <button class="btn btn-sm btn-active" data-range="all" onclick="setRange('all')">Full</button>
+                    </div>
+                </div>
+                <div style="height:350px;position:relative">
+                    <canvas id="priceChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forecast Table -->
+        <div class="table-panel">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Type</th>
+                        <th>Forecasted Price (Today)</th>
+                        <th>Confidence</th>
+                        <th>Historical Mean</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody id="forecast-body"></tbody>
+            </table>
+        </div>
+
+        <!-- Model Health -->
+        <div class="model-grid" id="model-grid">
+            <div class="model-card">
+                <div class="model-card-title">Model Version</div>
+                <div class="model-metric" style="color:var(--cyan)">XGBoost v1</div>
+                <div class="model-desc" id="model-features">105 Features</div>
+            </div>
+            <div class="model-card">
+                <div class="model-card-title">Database Storage</div>
+                <div class="model-metric" style="color:var(--green)">SQLite</div>
+                <div class="model-desc">historical.db loaded</div>
+            </div>
+            <div class="model-card">
+                <div class="model-card-title">Error Metrics</div>
+                <div class="model-metric" id="model-mae" style="color:var(--amber);font-size:20px">MAE $368</div>
+                <div class="model-desc">MAPE: 8.5%</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

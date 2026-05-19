@@ -1,0 +1,9 @@
+{
+  "model": "Selected Model",
+  "route_category": "fronthaul_only",
+  "mae": 194.02166666666668,
+  "rmse": 234.90785310414807,
+  "r2": -1.7117905913123486,
+  "mape": 7.409610463612461,
+  "n_samples": 6
+}

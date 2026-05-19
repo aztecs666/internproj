@@ -1,0 +1,184 @@
+Dataset: final_ml_dataset
+Shape: (9800, 76)
+Numeric columns: 74
+Categorical columns: 2
+
+=== Dtypes ===
+Date                                  object
+Route                                 object
+Price_USD                              int64
+Origin_LSCI                          float64
+Dest_LSCI                            float64
+Route_Mean_LSCI                      float64
+Route_Mean_air                       float64
+air_South_China_Sea                  float64
+air_Indian_Ocean                     float64
+air_Arabian_Sea                      float64
+air_Red_Sea                          float64
+air_Mediterranean_Sea                float64
+air_North_Atlantic                   float64
+air_North_Sea                        float64
+Route_Mean_slp                       float64
+slp_South_China_Sea                  float64
+slp_Indian_Ocean                     float64
+slp_Arabian_Sea                      float64
+slp_Red_Sea                          float64
+slp_Mediterranean_Sea                float64
+slp_North_Atlantic                   float64
+slp_North_Sea                        float64
+Route_Mean_wind_speed                float64
+wind_speed_South_China_Sea           float64
+wind_speed_Indian_Ocean              float64
+wind_speed_Arabian_Sea               float64
+wind_speed_Red_Sea                   float64
+wind_speed_Mediterranean_Sea         float64
+wind_speed_North_Atlantic            float64
+wind_speed_North_Sea                 float64
+cyclone_wind_South_China_Sea         float64
+cyclone_slp_South_China_Sea          float64
+cyclone_dist_South_China_Sea         float64
+cyclone_active_South_China_Sea       float64
+cyclone_wind_Indian_Ocean            float64
+cyclone_slp_Indian_Ocean             float64
+cyclone_dist_Indian_Ocean            float64
+cyclone_active_Indian_Ocean          float64
+cyclone_wind_Arabian_Sea             float64
+cyclone_slp_Arabian_Sea              float64
+cyclone_dist_Arabian_Sea             float64
+cyclone_active_Arabian_Sea           float64
+cyclone_wind_Red_Sea                 float64
+cyclone_slp_Red_Sea                  float64
+cyclone_dist_Red_Sea                 float64
+cyclone_active_Red_Sea               float64
+cyclone_wind_Mediterranean_Sea       float64
+cyclone_slp_Mediterranean_Sea        float64
+cyclone_dist_Mediterranean_Sea       float64
+cyclone_active_Mediterranean_Sea     float64
+cyclone_wind_North_Atlantic          float64
+cyclone_slp_North_Atlantic           float64
+cyclone_dist_North_Atlantic          float64
+cyclone_active_North_Atlantic        float64
+cyclone_wind_North_Sea               float64
+cyclone_slp_North_Sea                float64
+cyclone_dist_North_Sea               float64
+cyclone_active_North_Sea             float64
+Route_Max_cyclone_wind               float64
+Route_Min_cyclone_slp                float64
+Route_Min_cyclone_dist               float64
+Route_cyclone_active                 float64
+air_North_Pacific_West               float64
+air_North_Pacific_East               float64
+slp_North_Pacific_West               float64
+slp_North_Pacific_East               float64
+wind_speed_North_Pacific_West        float64
+wind_speed_North_Pacific_East        float64
+cyclone_wind_North_Pacific_West      float64
+cyclone_slp_North_Pacific_West       float64
+cyclone_dist_North_Pacific_West      float64
+cyclone_active_North_Pacific_West    float64
+cyclone_wind_North_Pacific_East      float64
+cyclone_slp_North_Pacific_East       float64
+cyclone_dist_North_Pacific_East      float64
+cyclone_active_North_Pacific_East    float64
+
+=== Missing Values ===
+Origin_LSCI                           284
+Dest_LSCI                             284
+Route_Mean_LSCI                       284
+Route_Mean_air                        284
+air_South_China_Sea                   284
+air_Indian_Ocean                     4284
+air_Arabian_Sea                      4284
+air_Red_Sea                          4284
+air_Mediterranean_Sea                4284
+air_North_Atlantic                   4284
+air_North_Sea                        4284
+Route_Mean_slp                        284
+slp_South_China_Sea                   284
+slp_Indian_Ocean                     4284
+slp_Arabian_Sea                      4284
+slp_Red_Sea                          4284
+slp_Mediterranean_Sea                4284
+slp_North_Atlantic                   4284
+slp_North_Sea                        4284
+Route_Mean_wind_speed                 284
+wind_speed_South_China_Sea            284
+wind_speed_Indian_Ocean              4284
+wind_speed_Arabian_Sea               4284
+wind_speed_Red_Sea                   4284
+wind_speed_Mediterranean_Sea         4284
+wind_speed_North_Atlantic            4284
+wind_speed_North_Sea                 4284
+cyclone_wind_South_China_Sea          284
+cyclone_slp_South_China_Sea          8746
+cyclone_dist_South_China_Sea         8332
+cyclone_active_South_China_Sea        284
+cyclone_wind_Indian_Ocean            4284
+cyclone_slp_Indian_Ocean             8590
+cyclone_dist_Indian_Ocean            8448
+cyclone_active_Indian_Ocean          4284
+cyclone_wind_Arabian_Sea             4284
+cyclone_slp_Arabian_Sea              9592
+cyclone_dist_Arabian_Sea             9528
+cyclone_active_Arabian_Sea           4284
+cyclone_wind_Red_Sea                 4284
+cyclone_slp_Red_Sea                  9800
+cyclone_dist_Red_Sea                 9800
+cyclone_active_Red_Sea               4284
+cyclone_wind_Mediterranean_Sea       4284
+cyclone_slp_Mediterranean_Sea        8972
+cyclone_dist_Mediterranean_Sea       8954
+cyclone_active_Mediterranean_Sea     4284
+cyclone_wind_North_Atlantic          4284
+cyclone_slp_North_Atlantic           9800
+cyclone_dist_North_Atlantic          9800
+cyclone_active_North_Atlantic        4284
+cyclone_wind_North_Sea               4284
+cyclone_slp_North_Sea                9714
+cyclone_dist_North_Sea               9708
+cyclone_active_North_Sea             4284
+Route_Max_cyclone_wind                284
+Route_Min_cyclone_slp                6190
+Route_Min_cyclone_dist               5620
+Route_cyclone_active                  284
+air_North_Pacific_West               5800
+air_North_Pacific_East               5800
+slp_North_Pacific_West               5800
+slp_North_Pacific_East               5800
+wind_speed_North_Pacific_West        5800
+wind_speed_North_Pacific_East        5800
+cyclone_wind_North_Pacific_West      5800
+cyclone_slp_North_Pacific_West       9008
+cyclone_dist_North_Pacific_West      8850
+cyclone_active_North_Pacific_West    5800
+cyclone_wind_North_Pacific_East      5800
+cyclone_slp_North_Pacific_East       9792
+cyclone_dist_North_Pacific_East      9760
+cyclone_active_North_Pacific_East    5800
+
+Total missing: 369216
+
+=== Describe (numeric) ===
+          Price_USD  Origin_LSCI    Dest_LSCI  Route_Mean_LSCI  Route_Mean_air  air_South_China_Sea  air_Indian_Ocean  air_Arabian_Sea  air_Red_Sea  air_Mediterranean_Sea  air_North_Atlantic  air_North_Sea  Route_Mean_slp  slp_South_China_Sea  slp_Indian_Ocean  slp_Arabian_Sea    slp_Red_Sea  slp_Mediterranean_Sea  slp_North_Atlantic  slp_North_Sea  Route_Mean_wind_speed  wind_speed_South_China_Sea  wind_speed_Indian_Ocean  wind_speed_Arabian_Sea  wind_speed_Red_Sea  wind_speed_Mediterranean_Sea  wind_speed_North_Atlantic  wind_speed_North_Sea  cyclone_wind_South_China_Sea  cyclone_slp_South_China_Sea  cyclone_dist_South_China_Sea  cyclone_active_South_China_Sea  cyclone_wind_Indian_Ocean  cyclone_slp_Indian_Ocean  cyclone_dist_Indian_Ocean  cyclone_active_Indian_Ocean  cyclone_wind_Arabian_Sea  cyclone_slp_Arabian_Sea  cyclone_dist_Arabian_Sea  cyclone_active_Arabian_Sea  cyclone_wind_Red_Sea  cyclone_slp_Red_Sea  cyclone_dist_Red_Sea  cyclone_active_Red_Sea  cyclone_wind_Mediterranean_Sea  cyclone_slp_Mediterranean_Sea  cyclone_dist_Mediterranean_Sea  cyclone_active_Mediterranean_Sea  cyclone_wind_North_Atlantic  cyclone_slp_North_Atlantic  cyclone_dist_North_Atlantic  cyclone_active_North_Atlantic  cyclone_wind_North_Sea  cyclone_slp_North_Sea  cyclone_dist_North_Sea  cyclone_active_North_Sea  Route_Max_cyclone_wind  Route_Min_cyclone_slp  Route_Min_cyclone_dist  Route_cyclone_active  air_North_Pacific_West  air_North_Pacific_East  slp_North_Pacific_West  slp_North_Pacific_East  wind_speed_North_Pacific_West  wind_speed_North_Pacific_East  cyclone_wind_North_Pacific_West  cyclone_slp_North_Pacific_West  cyclone_dist_North_Pacific_West  cyclone_active_North_Pacific_West  cyclone_wind_North_Pacific_East  cyclone_slp_North_Pacific_East  cyclone_dist_North_Pacific_East  cyclone_active_North_Pacific_East
+count   9800.000000  9516.000000  9516.000000      9516.000000     9516.000000          9516.000000       5516.000000      5516.000000  5516.000000            5516.000000         5516.000000    5516.000000     9516.000000          9516.000000       5516.000000      5516.000000    5516.000000            5516.000000         5516.000000    5516.000000            9516.000000                 9516.000000              5516.000000             5516.000000         5516.000000                   5516.000000                5516.000000           5516.000000                   9516.000000                  1054.000000                   1468.000000                     9516.000000                5516.000000               1210.000000                1352.000000                  5516.000000               5516.000000               208.000000                272.000000                 5516.000000                5516.0                  0.0                   0.0                  5516.0                     5516.000000                     828.000000                      846.000000                       5516.000000                       5516.0                         0.0                          0.0                         5516.0             5516.000000              86.000000               92.000000               5516.000000             9516.000000            3610.000000             4180.000000           9516.000000             4000.000000             4000.000000             4000.000000             4000.000000                    4000.000000                    4000.000000                      4000.000000                      792.000000                       950.000000                        4000.000000                      4000.000000                        8.000000                        40.000000                        4000.000000
+mean    2273.933980    57.746421    57.746421        57.746421      292.789394           298.094063        297.975631       300.380915   299.677050             290.973764          288.358598     281.800705   101309.088208        101042.162843     101409.712037    100991.193525  101055.759057          101619.962401       101557.013238  101206.175124               2.651437                    2.884446                 3.917355                4.025988            2.036954                      2.027319                   1.403573              4.734858                      3.860866                   990.032258                     95.797003                        0.154266                  10.462654                987.279339                1144.174556                     0.245105                  1.865482               987.596154                281.985294                    0.049311                   0.0                  NaN                   NaN                     0.0                        7.781001                     989.898551                      615.491726                          0.153372                          0.0                         NaN                          NaN                            0.0                0.710660             979.883721              454.065217                  0.016679               17.833544             985.160665              528.072249              0.439260              287.256404              288.427504           101358.189281           101697.469347                       2.003999                       1.597107                         8.687500                      978.939394                       490.115789                           0.237500                         0.040000                      999.500000                      1272.000000                           0.010000
+std     3057.168902    14.125477    14.125477        11.750904        3.412510             1.807610          1.258721         2.100290     5.367884               6.311031            3.621577       4.851844      209.006632           285.933167        192.342542       364.541409     398.793728             465.992264          339.963601     964.981973               0.861655                    1.359469                 1.581465                2.284756            0.899128                      1.091448                   0.912777              2.436222                     14.362076                    17.728803                    118.651873                        0.361223                  23.331282                 21.661345                 668.412979                     0.430189                 10.643435                15.344369                271.420073                    0.216536                   0.0                  NaN                   NaN                     0.0                       20.575313                      18.558951                      574.353803                          0.360378                          0.0                         NaN                          NaN                            0.0                5.854293              17.141912              453.853266                  0.128076               28.724030              21.342805              639.297596              0.496323                5.787976                2.772897              316.778306              399.228914                       1.177377                       0.914538                        23.030902                       24.163505                       534.616372                           0.425604                         1.413825                        6.866066                       499.739932                           0.099511
+min       27.000000    32.240000    32.240000        40.903333      285.162718           291.164042        295.185926       295.047714   285.578787             277.730445          281.288335     266.374995   100737.866294        100194.296875     100639.432566    100124.065657  100214.836957          100284.495798       100329.958824   97353.055556               0.527729                    0.056243                 0.181940                0.052406            0.055551                      0.058108                   0.005972              0.109757                      0.000000                   915.000000                      0.000000                        0.000000                   0.000000                910.000000                   0.000000                     0.000000                  0.000000               928.000000                  0.000000                    0.000000                   0.0                  NaN                   NaN                     0.0                        0.000000                     919.000000                        0.000000                          0.000000                          0.0                         NaN                          NaN                            0.0                0.000000             932.000000                0.000000                  0.000000                0.000000             905.000000                0.000000              0.000000              276.360747              283.683384           100500.954301           100000.791667                       0.011685                       0.029716                         0.000000                      905.000000                         0.000000                           0.000000                         0.000000                      991.000000                       102.000000                           0.000000
+25%      366.000000    51.677778    51.677778        47.613333      289.964205           296.754414        296.860849       298.766907   294.891838             285.254817          285.084583     277.733321   101162.781559        100821.875000     101272.713816    100688.030303  100730.489130          101295.021008       101364.700000  100623.690476               2.028883                    1.863828                 2.723587                2.157603            1.351634                      1.253920                   0.714451              2.852177                      0.000000                   985.000000                      0.000000                        0.000000                   0.000000                978.000000                 621.750000                     0.000000                  0.000000               978.000000                 46.250000                    0.000000                   0.0                  NaN                   NaN                     0.0                        0.000000                     978.000000                       26.250000                          0.000000                          0.0                         NaN                          NaN                            0.0                0.000000             968.000000                6.000000                  0.000000                0.000000             975.000000               11.000000              0.000000              281.818353              285.910595           101128.798723           101475.909722                       1.162401                       0.925704                         0.000000                      965.000000                        51.000000                           0.000000                         0.000000                      996.250000                       903.250000                           0.000000
+50%     1354.000000    55.200000    55.200000        54.133333      292.913425           298.584105        297.969531       300.809331   300.728244             290.812078          287.997668     281.403159   101291.218022        101021.132812     101411.282895    101023.042929  101019.293478          101522.678571       101589.944118  101276.111111               2.669760                    2.697233                 3.889491                3.691911            2.002105                      1.865331                   1.215563              4.460805                      0.000000                   996.000000                     46.000000                        0.000000                   0.000000                996.000000                1132.500000                     0.000000                  0.000000               994.000000                204.000000                    0.000000                   0.0                  NaN                   NaN                     0.0                        0.000000                     995.000000                      462.000000                          0.000000                          0.0                         NaN                          NaN                            0.0                0.000000             977.000000              243.000000                  0.000000                0.000000             992.000000              225.000000              0.000000              287.283190              287.959464           101337.987231           101752.381944                       1.795038                       1.458595                         0.000000                      987.000000                       326.000000                           0.000000                         0.000000                      999.000000                      1263.000000                           0.000000
+75%     2349.000000    58.580000    58.580000        68.718889      295.738235           299.614310        299.108957       301.885095   304.634780             297.090122          291.843412     286.232539   101440.415341        101254.348958     101549.111842    101293.914141  101362.717391          101896.533613       101781.682353  101860.238095               3.259737                    3.775859                 5.088340                5.580381            2.659581                      2.620850                   1.912555              6.275021                      0.000000                  1000.000000                    159.000000                        0.000000                   0.000000               1002.000000                1673.500000                     0.000000                  0.000000               998.250000                425.500000                    0.000000                   0.0                  NaN                   NaN                     0.0                        0.000000                    1005.000000                     1076.500000                          0.000000                          0.0                         NaN                          NaN                            0.0                0.000000             993.750000              815.000000                  0.000000               35.000000            1000.000000              920.000000              1.000000              292.929079              291.003206           101564.143145           101959.623264                       2.558601                       2.078403                         0.000000                      998.000000                       747.750000                           0.000000                         0.000000                     1002.250000                      1692.750000                           0.000000
+max    15185.000000    81.800000    81.800000        80.150000      298.749627           301.922129        300.462248       304.669427   309.084231             302.552099          294.587942     293.639273   102086.450231        102003.541667     101952.606908    101815.227273  102207.010870          103446.197479       102695.376471  103843.174603               5.824521                    8.011402                 8.700480               10.493752            5.391680                      8.077815                   5.589875             14.241392                    105.000000                  1014.000000                    510.000000                        1.000000                 135.000000               1013.000000                2710.000000                     1.000000                125.000000              1006.000000               1072.000000                    1.000000                   0.0                  NaN                   NaN                     0.0                      140.000000                    1020.000000                     2037.000000                          1.000000                          0.0                         NaN                          NaN                            0.0               70.000000            1010.000000             1348.000000                  1.000000              140.000000            1020.000000             2994.000000              1.000000              296.293548              293.891309           102472.063172           102912.166667                       7.421566                       5.892808                       115.000000                     1016.000000                      2994.000000                           1.000000                        60.000000                     1009.000000                      1971.000000                           1.000000
+
+=== Describe (categorical) ===
+              Date                         Route
+count         9800                          9800
+unique        2829                             4
+top     2026-04-15  XSICFENE_FarEast_NorthEurope
+freq             4                          2829
+
+=== Route Value Counts ===
+Route
+XSICFENE_FarEast_NorthEurope    2829
+XSICNEFE_NorthEurope_FarEast    2829
+XSICFEUW_FarEast_USWestCoast    2071
+XSICUWFE_USWestCoast_FarEast    2071

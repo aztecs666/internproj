@@ -1,0 +1,46 @@
+
+XNeta Index Prediction & Accuracy Analysis Report
+==================================================
+Generated: 2026-05-02 07:29:40
+Output Directory: D:\Internproj\mltest
+
+MODELS USED:
+------------
+1. Selected Model: D:\Internproj\selectedmodel\xgb_80_20_lr001_depth5.json
+   - Type: XGBoost (80/20 split, lr=0.01, depth=5)
+   - Features: 105
+   
+2. New ML Model: D:\Internproj\New ML\xgb_model.pkl
+   - Type: XGBoost (trained on 2025-truncated data)
+   - Features: 78
+
+PREDICTION PERIOD:
+------------------
+From: April 16, 2026
+To: April 30, 2026
+Total days: 15
+Routes: 4
+
+DATA SOURCES:
+-------------
+- Historical data: Up to April 15, 2026
+- Real XSI-C prices: CompassFT website, Xeneta weekly market updates
+- Weather data: Last known values used as proxy (Apr 15, 2026)
+
+KEY FINDINGS:
+-------------
+- Total predictions generated: 60
+- Real data points available: 8
+
+OUTPUT FILES:
+-------------
+- predictions_vs_real.csv: All predictions with real data where available
+- detailed_comparison.csv: Detailed error analysis
+- per_route_metrics.csv: Per-route accuracy metrics
+- metrics_*.json: Overall metrics for each model
+
+NOTES:
+------
+- Weather features for Apr 16-30 use April 15 values as proxy
+- Real XSI data sourced from CompassFT (daily index) and Xeneta weekly updates
+- Some dates may not have real data due to limited public sources

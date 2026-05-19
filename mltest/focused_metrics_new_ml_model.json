@@ -1,0 +1,9 @@
+{
+  "model": "New ML Model",
+  "route_category": "fronthaul_only",
+  "mae": 666.1633333333334,
+  "rmse": 693.7351795894455,
+  "r2": -22.650945903731728,
+  "mape": 24.931425106350037,
+  "n_samples": 6
+}

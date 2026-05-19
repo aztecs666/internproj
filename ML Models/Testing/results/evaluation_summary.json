@@ -1,0 +1,95 @@
+{
+  "total_models_evaluated": 160,
+  "rf_models": 80,
+  "xgb_models": 80,
+  "best_overall_split": "80_20",
+  "best_overall_split_mae": 317.4293072673594,
+  "best_overall_model": "XGBoost_80_20_sub06_col10",
+  "best_overall_mae": 217.4040069580078,
+  "top5_overall": [
+    {
+      "model_type": "XGBoost",
+      "param_label": "sub06_col10",
+      "split": "80_20",
+      "MAE": 217.4040069580078
+    },
+    {
+      "model_type": "XGBoost",
+      "param_label": "sub10_col10",
+      "split": "80_20",
+      "MAE": 236.38833618164062
+    },
+    {
+      "model_type": "XGBoost",
+      "param_label": "lr03_depth5",
+      "split": "80_20",
+      "MAE": 259.537109375
+    },
+    {
+      "model_type": "RandomForest",
+      "param_label": "preprune_leaf8",
+      "split": "80_20",
+      "MAE": 259.7361574095686
+    },
+    {
+      "model_type": "RandomForest",
+      "param_label": "preprune_leaf4",
+      "split": "80_20",
+      "MAE": 261.1649944298987
+    }
+  ],
+  "top5_rf": [
+    {
+      "param_label": "preprune_leaf8",
+      "split": "80_20",
+      "MAE": 259.7361574095686
+    },
+    {
+      "param_label": "preprune_leaf4",
+      "split": "80_20",
+      "MAE": 261.1649944298987
+    },
+    {
+      "param_label": "preprune_strict",
+      "split": "80_20",
+      "MAE": 261.2174714635749
+    },
+    {
+      "param_label": "preprune_depth10",
+      "split": "80_20",
+      "MAE": 264.9750542422181
+    },
+    {
+      "param_label": "combined_depth10_ccp001",
+      "split": "80_20",
+      "MAE": 265.6603601990155
+    }
+  ],
+  "top5_xgb": [
+    {
+      "param_label": "sub06_col10",
+      "split": "80_20",
+      "MAE": 217.4040069580078
+    },
+    {
+      "param_label": "sub10_col10",
+      "split": "80_20",
+      "MAE": 236.38833618164062
+    },
+    {
+      "param_label": "lr03_depth5",
+      "split": "80_20",
+      "MAE": 259.537109375
+    },
+    {
+      "param_label": "lr01_depth3",
+      "split": "80_20",
+      "MAE": 261.49493408203125
+    },
+    {
+      "param_label": "lr02_depth5",
+      "split": "80_20",
+      "MAE": 264.6900634765625
+    }
+  ]
+}

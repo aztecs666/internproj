@@ -1,0 +1,99 @@
+================================================================================
+XNETA INDEX PREDICTION & ACCURACY ANALYSIS - FINAL REPORT
+================================================================================
+Generated: 2026-05-02 07:34:42
+Output Directory: D:\Internproj\mltest
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+This analysis compares predictions from two XGBoost models against real XSI-C
+(Xeneta Shipping Index by Compass) data for the period April 16-30, 2026.
+
+KEY FINDINGS:
+  1. Selected Model (xgb_80_20_lr001_depth5) outperforms New ML Model on fronthaul routes
+  2. FrontHaul routes (FENE, FEUW) show reasonable prediction accuracy
+  3. BackHaul routes (NEFE, UWFE) show significant prediction errors
+  4. This discrepancy is due to training data symmetry (both directions had same prices)
+     while real-world backhaul rates are significantly lower.
+
+FRONTHAUL ROUTE ANALYSIS (Reliable Data)
+--------------------------------------------------------------------------------
+Routes: FarEast to NorthEurope (FENE), FarEast to USWestCoast (FEUW)
+Real data points available: 6
+
+Selected Model:
+  MAE:  $194.02
+  RMSE: $234.91
+  R2:   -1.7118
+  MAPE: 7.41%
+
+New ML Model:
+  MAE:  $666.16
+  RMSE: $693.74
+  R2:   -22.6509
+  MAPE: 24.93%
+
+Per-Route Breakdown (FrontHaul):
+
+  XSICFENE_FarEast_NorthEurope:
+    Real data points: 3
+    Selected: MAE=$286.83, MAPE=11.26%
+    New ML: MAE=$788.40, MAPE=30.73%
+
+  XSICFEUW_FarEast_USWestCoast:
+    Real data points: 3
+    Selected: MAE=$101.21, MAPE=3.56%
+    New ML: MAE=$543.93, MAPE=19.13%
+
+BACKHAUL ROUTE ANALYSIS (Data Quality Issue)
+--------------------------------------------------------------------------------
+Routes: NorthEurope to FarEast (NEFE), USWestCoast to FarEast (UWFE)
+
+ISSUE IDENTIFIED:
+  Training dataset used symmetric pricing for both directions of each route pair.
+  However, real-world backhaul rates are significantly lower than fronthaul rates.
+
+  XSICNEFE_NorthEurope_FarEast:
+    Real XSI-C Price:    $228
+    Selected Model Pred: $2,915
+    New ML Model Pred:   $3,504
+    Selected Error:      $-2,687 (-1178.3%)
+
+  XSICUWFE_USWestCoast_FarEast:
+    Real XSI-C Price:    $646
+    Selected Model Pred: $2,984
+    New ML Model Pred:   $3,451
+    Selected Error:      $-2,338 (-362.0%)
+
+DATA SOURCES
+--------------------------------------------------------------------------------
+Real XSI-C Prices:
+  - Compass Financial Technologies: https://www.compassft.com
+  - Xeneta Weekly Market Updates: https://www.xeneta.com/news
+
+Weather/Economic Data:
+  - Historical data up to Apr 15, 2026 from engineered dataset
+  - Apr 16-30 weather: proxied using Apr 15 values (API access limited)
+
+OUTPUT FILES
+--------------------------------------------------------------------------------
+  predictions_vs_real.csv      - All predictions with real data
+  detailed_comparison.csv      - Detailed error analysis
+  per_route_metrics.csv        - Per-route accuracy metrics
+  metrics_*.json               - Overall metrics for each model
+  focused_metrics_*.json       - FrontHaul-focused metrics
+  01_fronthaul_predictions.png - Time series predictions
+  02_actual_vs_predicted.png   - Scatter plots
+  03_error_distribution.png    - Error histograms
+  04_per_route_mae.png         - MAE comparison bar chart
+  05_daily_trends.png          - Daily price trends
+
+RECOMMENDATIONS
+--------------------------------------------------------------------------------
+  1. For future predictions, focus on fronthaul routes where models are reliable
+  2. Retrain models with asymmetric route pricing (different prices per direction)
+  3. Integrate real-time weather APIs for more accurate short-term forecasts
+  4. The Selected Model (xgb_80_20_lr001_depth5) is recommended for production use
+     based on better FrontHaul accuracy.
+
+================================================================================
