@@ -8,7 +8,7 @@ An end-to-end Machine Learning pipeline and real-time streaming dashboard for pr
 
 Here is the high-level system architecture of the Maritime Route Cost Forecaster pipeline and dashboard:
 
-![System Architecture Diagram](internship/system_architecture.png)
+![System Architecture Diagram](internship/system_architecture_clean.png)
 
 ---
 
@@ -97,7 +97,7 @@ The `website` directory houses a premium, real-time prediction visualizing dashb
 │   ├── Testing/            # Model performance tests
 │   └── Visualization/      # Generated plots and evaluation curves
 ├── internship/             # System Analysis reports, diagrams, and developer notes
-│   ├── system_architecture.png # Generated architecture diagram asset
+│   ├── system_architecture_clean.png # Generated architecture diagram asset
 │   ├── 3_System_Analysis.md
 │   ├── Activity_Diagram.md
 │   └── Data_Flow_Diagram.md
