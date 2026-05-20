@@ -31,19 +31,19 @@ The system utilizes the **CRISP-DM (Cross-Industry Standard Process for Data Min
 ## 3.6 UseCase Diagram
 
 ```mermaid
-usecaseDiagram
-    actor "Developer / Researcher" as User
-
-    package "Maritime Route Forecaster System" {
-        usecase "Fetch External Data (NOAA, LSCI, Xeneta)" as UC1
-        usecase "Aggregate Weather Zones" as UC2
-        usecase "Engineer Predictive Features" as UC3
-        usecase "Train ML Models (RF, XGB)" as UC4
-        usecase "Evaluate Model Accuracy" as UC5
-        usecase "Generate Future Price Forecast" as UC6
-        usecase "View Visualization Dashboard" as UC7
-    }
-
+graph LR
+    User["Developer / Researcher"]
+    
+    subgraph System ["Maritime Route Forecaster System"]
+        UC1["Fetch External Data (NOAA, LSCI, Xeneta)"]
+        UC2["Aggregate Weather Zones"]
+        UC3["Engineer Predictive Features"]
+        UC4["Train ML Models (RF, XGB)"]
+        UC5["Evaluate Model Accuracy"]
+        UC6["Generate Future Price Forecast"]
+        UC7["View Visualization Dashboard"]
+    end
+    
     User --> UC1
     User --> UC2
     User --> UC3
